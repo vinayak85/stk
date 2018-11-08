@@ -14,8 +14,10 @@ from frappe import _
 from frappe.model.mapper import get_mapped_doc
 from upstox_api.api import *
 
+u = None;
 @frappe.whitelist()
 def auth():
+	global  u
 	c = frappe.db.sql("""select api_key,api_secret,accesstoken,code from 1bd3e0294da19198.tabtest where name='b2550d9017';""", as_dict=1);
 	key=c[0].api_key;
 	secret=c[0].api_secret;
