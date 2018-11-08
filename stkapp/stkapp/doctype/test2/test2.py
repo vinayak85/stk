@@ -79,7 +79,7 @@ def profile():
 	end_date = datetime.datetime.strptime('06/11/2018', '%d/%m/%Y').date()
 	#ohlc = u.get_ohlc(u.get_instrument_by_symbol('NSE_FO', 'JUBLFOOD17NOVFUT'), OHLCInterval.Minute_5, datetime.datetime.strptime(start_date, '%d/%m/%Y').date(), datetime.datetime.strptime(end_date, '%d/%m/%Y').date())
 	#frappe.msgprint(_(u.get_ohlc(tatasteel_nse_eq, OHLCInterval.Minute_5, str(start_date), str(end_date) )));
-	frappe.msgprint(_(tatasteel_nse_eq));
+	frappe.msgprint(_(str(tatasteel_nse_eq)));
 class test2(Document):
 	pass
 
