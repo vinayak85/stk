@@ -52,30 +52,7 @@ def auth():
 	
 	
 
-@frappe.whitelist()
-def auth2():
-	c = frappe.db.sql("""select api_key,api_secret,accesstoken,code from 1bd3e0294da19198.tabtest where name='b2550d9017';""", as_dict=1);
-	key=c[0].api_key;
-	secret=c[0].api_secret;
-	access_token=c[0].api_secret;
-	code==c[0].code;
-	if access_token is None :
-		s = Session(key);
-		s.set_redirect_uri('http://upstox.com:3000');
-		s.set_api_secret(secret);
-		s.set_code(code)
-		try:
-			access_token = s.retrieve_access_token()
-		except SystemError as se:
-			frappe.msgprint(_('Uh oh, there seems to be something wrong. Error: [%s]' % se));
-			return
-			#print('Uh oh, there seems to be something wrong. Error: [%s]' % se)
-            
-		
-	
-	if access_token is not None :
-		u = Upstox(stored_api_key, stored_access_token);
-		logged_in = True
+
 
 def profile():
 	profile = u.get_profile();
