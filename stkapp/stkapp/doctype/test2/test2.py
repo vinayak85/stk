@@ -50,7 +50,7 @@ def auth():
 		frappe.msgprint(_('access_token: %s\n' % access_token));
 		
 			
-	'''
+	
 	if code != "" and access_token != "" :
 		try:
 			u = Upstox(key, access_token);
@@ -61,7 +61,7 @@ def auth():
 			#print('Sorry, there was an error [%s]. Let''s start over\n\n' % e)
 			return	
 	
-	'''
+	
 
 
 
