@@ -1,2 +1,2 @@
 frappe
-upstox_api
+upstox
