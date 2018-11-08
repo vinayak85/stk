@@ -84,7 +84,7 @@ def profile():
 	
 	master_contract = u.get_master_contract('NSE_EQ');
 	#frappe.msgprint(_(master_contract["RELIANCE"]));
-	frappe.msgprint(_(master_contract)); 
+	frappe.msgprint(_(master_contract[RELIANCE INDUSTRIES LTD])); 
         
         #return master_contract[token]
 	
