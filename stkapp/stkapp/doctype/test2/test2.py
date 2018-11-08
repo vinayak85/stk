@@ -42,7 +42,7 @@ def auth():
 	
 	if code is not None and access_token is not None :
 		try:
-			u = Upstox(stored_api_key, stored_access_token);
+			u = Upstox(key, access_token);
 			logged_in = True
 			profile();
 		except requests.HTTPError as e:
