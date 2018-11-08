@@ -73,7 +73,7 @@ def profile():
 	#frappe.msgprint(_(profile));
 	#frappe.msgprint(_(u.get_master_contract('NSE_EQ')));
 	#frappe.msgprint(_(u.get_balance()));
-	tatasteel_nse_eq = u.get_instrument_by_symbol('NSE_EQ', 'abbotindia')
+	tatasteel_nse_eq = u.get_instrument_by_symbol('NSE_EQ', 'ABBOTT INDIA LIMITED')
 	now = datetime.datetime.now()
 	start_date = datetime.datetime.strptime('01/11/2018', '%d/%m/%Y').date()
 	end_date = datetime.datetime.strptime('06/11/2018', '%d/%m/%Y').date()
