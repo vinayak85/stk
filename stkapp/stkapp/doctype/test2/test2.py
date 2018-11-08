@@ -70,7 +70,7 @@ def auth():
 
 def profile():
 	profile = u.get_profile();
-	frappe.msgprint(_(profile));
+	#frappe.msgprint(_(profile));
 	#frappe.msgprint(_(u.get_master_contract('NSE_EQ')));
 	#frappe.msgprint(_(u.get_balance()));
 	tatasteel_nse_eq =u.get_instrument_by_symbol('nse_eq', 'RELIANCE');
@@ -81,6 +81,11 @@ def profile():
 	#ohlc = u.get_ohlc(u.get_instrument_by_symbol('NSE_FO', 'JUBLFOOD17NOVFUT'), OHLCInterval.Minute_5, datetime.datetime.strptime(start_date, '%d/%m/%Y').date(), datetime.datetime.strptime(end_date, '%d/%m/%Y').date())
 	#frappe.msgprint(_(u.get_ohlc(u.get_instrument_by_symbol('NSE_EQ', 'ACC'), OHLCInterval.Minute_5, str(start_date), str(end_date) )));
 	#frappe.msgprint(_(tatasteel_nse_eq));
+	
+	master_contract = u.get_master_contract('NSE_EQ');
+	frappe.msgprint(_(master_contract['RELIANCE']));
+        
+        #return master_contract[token]
 	
 class test2(Document):
 	pass
