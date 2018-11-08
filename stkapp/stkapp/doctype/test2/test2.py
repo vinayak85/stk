@@ -32,7 +32,7 @@ def auth():
 	if code is None or code == "":
 		code == "";
 				
-	if code =="" :
+	if code == "" :
 		s = Session(key);
 		s.set_redirect_uri('http://upstox.com:3000');
 		s.set_api_secret(secret);
@@ -41,7 +41,7 @@ def auth():
 		
 		
 	
-	if code !="" and access_token =="" :
+	if code != "" and access_token == "" :
 		s = Session(key);
 		s.set_redirect_uri('http://upstox.com:3000');
 		s.set_api_secret(secret);
@@ -51,7 +51,7 @@ def auth():
 		
 			
 	
-	if code is !="" and access_token is !="" :
+	if code != "" and access_token != "" :
 		try:
 			u = Upstox(key, access_token);
 			logged_in = True
