@@ -16,15 +16,5 @@ frappe.ui.form.on('test2', {
 			}
 		});
 	}
-	process_2:function (frm) {
-		frappe.call({
-			method:'stkapp.stkapp.doctype.test2.test2.auth2',
-			args:{
-				
-			},
-			callback:function (r) {
-				
-			}
-		});
-	}
+	
 });
