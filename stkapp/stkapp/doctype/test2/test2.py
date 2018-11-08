@@ -22,7 +22,7 @@ def auth():
 	access_token=c[0].accesstoken;
 	code=c[0].code;
 	#frappe.msgprint(_('len key,se,at,code: ' + len(key)+ ',' +len(secret) +','+ len(access_token) +','+ len(code)));
-	frappe.msgprint(_(code ));
+	#frappe.msgprint(_(code ));
 	if key is None or key == "":
 		key == "";
 	if secret is None or secret == "":
@@ -50,7 +50,7 @@ def auth():
 		frappe.msgprint(_('access_token: %s\n' % access_token));
 		
 			
-	
+	'''
 	if code != "" and access_token != "" :
 		try:
 			u = Upstox(key, access_token);
@@ -61,7 +61,7 @@ def auth():
 			#print('Sorry, there was an error [%s]. Let''s start over\n\n' % e)
 			return	
 	
-	
+	'''
 
 
 
