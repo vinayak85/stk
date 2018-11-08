@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2018, vin and contributors
 # For license information, please see license.txt
-from upstox_api.api import *
-from __future__ import unicode_literals
 
+from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 import subprocess
@@ -13,6 +12,7 @@ from frappe.utils import cstr, flt, getdate, cint
 from frappe.model.naming import make_autoname
 from frappe import _
 from frappe.model.mapper import get_mapped_doc
+from upstox_api.api import *
 
 @frappe.whitelist()
 def auth():
