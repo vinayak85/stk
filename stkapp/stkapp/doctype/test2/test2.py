@@ -71,7 +71,9 @@ def profile():
 	profile = u.get_profile();
 	#frappe.msgprint(_(profile));
 	#frappe.msgprint(_(u.get_master_contract('NSE_EQ')));
-	frappe.msgprint(_(u.get_balance()));
+	#frappe.msgprint(_(u.get_balance()));
+	ohlc=u.get_ohlc(u.get_instrument_by_symbol('NSE_EQ', 'RELIANCE'), OHLCInterval.Minute_10, datetime.datetime.strptime('05/11/2018', '%d/%m/%Y').date(), datetime.datetime.strptime('08/11/2018', '%d/%m/%Y').date())
+	frappe.msgprint(_(ohlc)));
 class test2(Document):
 	pass
 
