@@ -23,7 +23,7 @@ def auth():
 	code=c[0].code;
 	#frappe.msgprint(_('len key,se,at,code: ' + len(key)+ ',' +len(secret) +','+ len(access_token) +','+ len(code)));
 	frappe.msgprint(_( len(key) ));
-	if code is None :
+	'''if code is None :
 		s = Session(key);
 		s.set_redirect_uri('http://upstox.com:3000');
 		s.set_api_secret(secret);
@@ -53,7 +53,7 @@ def auth():
 			return	
 	
 	
-
+'''
 
 
 def profile():
