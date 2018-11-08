@@ -71,6 +71,7 @@ def profile():
 	profile = u.get_profile();
 	#frappe.msgprint(_(profile));
 	frappe.msgprint(_(u.get_master_contract('NSE_EQ')));
+	frappe.msgprint(_(u.get_balance()));
 class test2(Document):
 	pass
 
