@@ -23,12 +23,16 @@ def auth():
 	code=c[0].code;
 	#frappe.msgprint(_('len key,se,at,code: ' + len(key)+ ',' +len(secret) +','+ len(access_token) +','+ len(code)));
 	frappe.msgprint(_(code ));
-	if code is None:
-		frappe.msgprint(_("None"));
-	if code == "":
-		frappe.msgprint(_("blank"));
+	if key is None or key == "":
+		key == "";
+	if secret is None or secret == "":
+		secret == "";
+	if access_token is None or access_token == "":
+		access_token == "";
+	if code is None or code == "":
+		code == "";
 				
-	'''if code is None :
+	if code =="" :
 		s = Session(key);
 		s.set_redirect_uri('http://upstox.com:3000');
 		s.set_api_secret(secret);
@@ -37,7 +41,7 @@ def auth():
 		
 		
 	
-	if code is not None and access_token is None :
+	if code !="" and access_token =="" :
 		s = Session(key);
 		s.set_redirect_uri('http://upstox.com:3000');
 		s.set_api_secret(secret);
@@ -47,7 +51,7 @@ def auth():
 		
 			
 	
-	if code is not None and access_token is not None :
+	if code is !="" and access_token is !="" :
 		try:
 			u = Upstox(key, access_token);
 			logged_in = True
@@ -58,7 +62,7 @@ def auth():
 			return	
 	
 	
-'''
+
 
 
 def profile():
