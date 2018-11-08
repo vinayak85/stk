@@ -7,7 +7,7 @@ frappe.ui.form.on('test2', {
 	},
 	process_1:function (frm) {
 		frappe.call({
-			method:'team.team.doctype.test2.test2.auth',
+			method:'stkapp.stkapp.doctype.test2.test2.auth',
 			args:{
 				
 			},
