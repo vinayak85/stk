@@ -20,7 +20,7 @@ def auth():
 	key=c[0].api_key;
 	secret=c[0].api_secret;
 	access_token=c[0].api_secret;
-	code==c[0].code;
+	code=c[0].code;
 	if code is None :
 		s = Session(key);
 		s.set_redirect_uri('http://upstox.com:3000');
