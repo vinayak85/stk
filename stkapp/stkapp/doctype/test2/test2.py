@@ -35,7 +35,7 @@ def auth():
 		s = Session(key);
 		s.set_redirect_uri('http://upstox.com:3000');
 		s.set_api_secret(secret);
-		code=c[0].code;
+		s.set_code (code);		
 		access_token = s.retrieve_access_token()
 		frappe.msgprint(_('access_token: %s\n' % access_token));
 		
