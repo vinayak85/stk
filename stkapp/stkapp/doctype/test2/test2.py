@@ -25,7 +25,7 @@ def auth():
 	frappe.msgprint(_(code ));
 	if code is None:
 		frappe.msgprint(_("None"));
-	if code="":
+	if code == "":
 		frappe.msgprint(_("blank"));
 				
 	'''if code is None :
