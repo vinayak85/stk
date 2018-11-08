@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include stkapp *.css
+recursive-include stkapp *.csv
+recursive-include stkapp *.html
+recursive-include stkapp *.ico
+recursive-include stkapp *.js
+recursive-include stkapp *.json
+recursive-include stkapp *.md
+recursive-include stkapp *.png
+recursive-include stkapp *.py
+recursive-include stkapp *.svg
+recursive-include stkapp *.txt
+recursive-exclude stkapp *.pyc
