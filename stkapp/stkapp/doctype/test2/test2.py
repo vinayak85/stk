@@ -74,8 +74,8 @@ def profile():
 	#frappe.msgprint(_(u.get_master_contract('NSE_EQ')));
 	#frappe.msgprint(_(u.get_balance()));
 	tatasteel_nse_eq = u.get_instrument_by_symbol('NSE_EQ', 'TATASTEEL')
-	ohlc=u.get_ohlc(tatasteel_nse_eq, OHLCInterval.Minute_10, datetime.datetime.strptime('05/11/2018', '%d/%m/%Y').date(), datetime.datetime.strptime('08/11/2018', '%d/%m/%Y').date())
-	frappe.msgprint(_(ohlc));
+	#ohlc = u.get_ohlc(u.get_instrument_by_symbol('NSE_FO', 'JUBLFOOD17NOVFUT'), OHLCInterval.Minute_5, datetime.datetime.strptime(start_date, '%d/%m/%Y').date(), datetime.datetime.strptime(end_date, '%d/%m/%Y').date())
+	frappe.msgprint(_(u.get_ohlc(u.get_instrument_by_symbol('NSE_EQ', 'TATASTEEL'), OHLCInterval.Minute_5, datetime.datetime.strptime(start_date, '%d/%m/%Y').date(), datetime.datetime.strptime(end_date, '%d/%m/%Y').date())));
 class test2(Document):
 	pass
 
