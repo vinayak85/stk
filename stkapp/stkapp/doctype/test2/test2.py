@@ -19,7 +19,7 @@ def auth():
 	c = frappe.db.sql("""select api_key,api_secret,accesstoken,code from 1bd3e0294da19198.tabtest where name='b2550d9017';""", as_dict=1);
 	key=c[0].api_key;
 	secret=c[0].api_secret;
-	access_token=c[0].api_secret;
+	access_token=c[0].accesstoken;
 	code=c[0].code;
 	frappe.msgprint(_(len(access_token)));
 	"""if code is None :
