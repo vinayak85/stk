@@ -77,10 +77,10 @@ def profile():
 	#tatasteel_nse_eq =u.get_instrument_by_symbol('nse_eq', 'RELIANCE');
 	acc_nse_eq = u.get_instrument_by_token('NSE_EQ', 22)
 	now = datetime.datetime.now()
-	start_date = datetime.datetime.strptime('01/11/2018', '%d/%m/%Y').date()
-	end_date = datetime.datetime.strptime('06/11/2018', '%d/%m/%Y').date()
+	start_date = datetime.datetime.strptime('09/11/2018', '%d/%m/%Y').date()
+	end_date = datetime.datetime.strptime('09/11/2018', '%d/%m/%Y').date()
 	#ohlc = u.get_ohlc(u.get_instrument_by_symbol('NSE_FO', 'JUBLFOOD17NOVFUT'), OHLCInterval.Minute_5, datetime.datetime.strptime(start_date, '%d/%m/%Y').date(), datetime.datetime.strptime(end_date, '%d/%m/%Y').date())
-	frappe.msgprint(_(u.get_ohlc(u.get_instrument_by_symbol('NSE_EQ', 'ACC'), OHLCInterval.Minute_5, start_date, end_date)));
+	frappe.msgprint(_(u.get_ohlc(u.get_instrument_by_symbol('NSE_EQ', 'YESBANK'), OHLCInterval.Minute_10, start_date, end_date)));
 	#frappe.msgprint(_(tatasteel_nse_eq));
 	
 	#master_contract = u.get_master_contract('NSE_EQ');
