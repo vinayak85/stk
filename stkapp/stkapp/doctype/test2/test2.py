@@ -86,7 +86,7 @@ def profile():
 	data=[];
 	data=u.get_ohlc(u.get_instrument_by_symbol('NSE_INDEX', 'NIFTY_50'), OHLCInterval.Minute_10, start_date, end_date);
 	for d in data:
-		frappe.msgprint(_(d));
+		frappe.msgprint(_(d.high));
 	
 	#master_contract = u.get_master_contract('NSE_EQ');
 	#frappe.msgprint(_(master_contract["RELIANCE"]));
