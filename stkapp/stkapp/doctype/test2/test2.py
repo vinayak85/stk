@@ -70,7 +70,8 @@ def auth():
 
 def profile():
 	profile = u.get_profile();
-	frappe.msgprint(_(u.get_master_contract('NSE_INDEX')));
+	#frappe.msgprint(_(u.get_master_contract('NSE_INDEX')));
+	u.get_master_contract('NSE_INDEX');
 	#frappe.msgprint(_(profile));
 	#frappe.msgprint(_(u.get_master_contract('NSE_EQ')));
 	#frappe.msgprint(_(u.get_balance()));
@@ -80,8 +81,12 @@ def profile():
 	start_date = datetime.datetime.strptime('09/11/2018', '%d/%m/%Y').date()
 	end_date = datetime.datetime.strptime('09/11/2018', '%d/%m/%Y').date()
 	#ohlc = u.get_ohlc(u.get_instrument_by_symbol('NSE_FO', 'JUBLFOOD17NOVFUT'), OHLCInterval.Minute_5, datetime.datetime.strptime(start_date, '%d/%m/%Y').date(), datetime.datetime.strptime(end_date, '%d/%m/%Y').date())
-	frappe.msgprint(_(u.get_ohlc(u.get_instrument_by_symbol('NSE_INDEX', 'NIFTY_50'), OHLCInterval.Minute_10, start_date, end_date)));
+	#frappe.msgprint(_(u.get_ohlc(u.get_instrument_by_symbol('NSE_INDEX', 'NIFTY_50'), OHLCInterval.Minute_10, start_date, end_date)));
 	#frappe.msgprint(_(tatasteel_nse_eq));
+	data=[];
+	data=u.get_ohlc(u.get_instrument_by_symbol('NSE_INDEX', 'NIFTY_50'), OHLCInterval.Minute_10, start_date, end_date);
+	for d in data:
+		frappe.msgprint(_(d));
 	
 	#master_contract = u.get_master_contract('NSE_EQ');
 	#frappe.msgprint(_(master_contract["RELIANCE"]));
