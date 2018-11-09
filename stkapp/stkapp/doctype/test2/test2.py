@@ -70,7 +70,7 @@ def auth():
 
 def profile():
 	profile = u.get_profile();
-	u.get_master_contract('NSE_INDEX') 
+	frappe.msgprint(_(u.get_master_contract('NSE_INDEX')));
 	#frappe.msgprint(_(profile));
 	#frappe.msgprint(_(u.get_master_contract('NSE_EQ')));
 	#frappe.msgprint(_(u.get_balance()));
